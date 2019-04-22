@@ -8,9 +8,14 @@ module.exports = {
     parser: 'babel-eslint'
   },
   extends: [
-    '@nuxtjs',
-    'plugin:nuxt/recommended'
+    'plugin:vue/recommended',
+    'eslint:recommended',
   ],
+
+  plugins: [
+    'vue'
+  ],
+
   // add your custom rules here
   rules: {
     'arrow-parens': [

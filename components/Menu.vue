@@ -9,10 +9,16 @@
       wrap
       justify-center
     >
-      <v-flex xs12 md6>
+      <v-flex
+        xs12
+        md6
+      >
         <about-me />
       </v-flex>
-      <v-flex xs12 md6>
+      <v-flex
+        xs12
+        md6
+      >
         <v-layout
           row
           justify-center
@@ -33,14 +39,14 @@
           class="mx-5 my-5 hidden-sm-and-down"
         >
           <contact v-if="pickedTab === 'CONTACT'" />
-          <cv v-if="pickedTab === 'CV'" />
+          <CV v-if="pickedTab === 'CV'" />
         </v-flex>
         <v-flex
           xs12
           class="mx-5 hidden-md-and-up"
         >
           <contact v-if="pickedTab === 'CONTACT'" />
-          <cv v-if="pickedTab === 'CV'" />
+          <CV v-if="pickedTab === 'CV'" />
         </v-flex>
       </v-flex>
     </v-layout>
@@ -50,10 +56,11 @@
 <script>
 import AboutMe from './AboutMe'
 import Contact from './Contact'
+import CV from './CV'
 
 export default {
   name: 'Menu',
-  components: { AboutMe, Contact },
+  components: { AboutMe, Contact, CV },
   data() {
     return {
       pickedTab: 'CONTACT'
