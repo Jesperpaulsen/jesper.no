@@ -1,34 +1,26 @@
 <template>
-  <v-app dark>
-    <v-toolbar
-      :clipped-left="clipped"
-      fixed
-      app
-    >
-      <v-spacer />
-      <v-btn
-        icon
-        @click.stop="rightDrawer = !rightDrawer"
-      >
-        <v-icon>menu</v-icon>
-      </v-btn>
-    </v-toolbar>
-    <v-content>
-      <v-container>
-        <nuxt />
-      </v-container>
-    </v-content>
+  <v-app>
+    <particles>
+      <nuxt />
+    </particles>
     <v-footer
       :fixed="fixed"
       app
     >
-      <span>&copy; 2019</span>
+      <v-flex
+        xs12
+        class="text-xs-center"
+      >
+        Jesper Paulsen &copy; 2019
+      </v-flex>
     </v-footer>
   </v-app>
 </template>
 
 <script>
+import Particles from '../components/Particles'
 export default {
+  components: { Particles },
   data() {
     return {
       clipped: false,
